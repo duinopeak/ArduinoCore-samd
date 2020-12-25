@@ -1,0 +1,1011 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# Duinopeak Boneduino M0 Express (SAMD21)
+# ------------------------------
+duinopeak_boneduino_m0_express.name=Duinopeak Boneduino M0 Express
+duinopeak_boneduino_m0_express.vid.0=0x239A
+duinopeak_boneduino_m0_express.pid.0=0x801B
+duinopeak_boneduino_m0_express.vid.1=0x239A
+duinopeak_boneduino_m0_express.pid.1=0x001B
+duinopeak_boneduino_m0_express.upload.tool=bossac
+duinopeak_boneduino_m0_express.upload.protocol=sam-ba
+duinopeak_boneduino_m0_express.upload.maximum_size=262144
+duinopeak_boneduino_m0_express.upload.offset=0x2000
+duinopeak_boneduino_m0_express.upload.use_1200bps_touch=true
+duinopeak_boneduino_m0_express.upload.wait_for_upload_port=true
+duinopeak_boneduino_m0_express.upload.native_usb=true
+duinopeak_boneduino_m0_express.build.mcu=cortex-m0plus
+duinopeak_boneduino_m0_express.build.f_cpu=48000000L
+duinopeak_boneduino_m0_express.build.usb_product="Boneduino M0 Express"
+duinopeak_boneduino_m0_express.build.usb_manufacturer="Duinopeak"
+duinopeak_boneduino_m0_express.build.board=SAMD_BONEDUINO_M0_EXPRESS
+duinopeak_boneduino_m0_express.build.core=arduino
+duinopeak_boneduino_m0_express.build.extra_flags=-DARDUINO_SAMD_ZERO -DARDUINO_SAMD_BONEDUINO_M0 -DARM_MATH_CM0PLUS -DDUINOPEAK_BONEDUINO_M0_EXPRESS -D__SAMD21G18A__ {build.usb_flags}
+duinopeak_boneduino_m0_express.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_boneduino_m0_express.build.openocdscript=openocd_scripts/boneduino_m0_express.cfg
+duinopeak_boneduino_m0_express.build.variant=boneduino_m0_express
+duinopeak_boneduino_m0_express.build.variant_system_lib=
+duinopeak_boneduino_m0_express.build.vid=0x239A
+duinopeak_boneduino_m0_express.build.pid=0x801B
+duinopeak_boneduino_m0_express.bootloader.tool=openocd
+duinopeak_boneduino_m0_express.bootloader.file=boneduino_m0_express/bootloader-boneduino_m0_express-3.11.0-18-g5301af7-dirty.bin
+duinopeak_boneduino_m0_express.menu.opt.small=Small (-Os) (standard)
+duinopeak_boneduino_m0_express.menu.opt.small.build.flags.optimize=-Os
+duinopeak_boneduino_m0_express.menu.opt.fast=Fast (-O2)
+duinopeak_boneduino_m0_express.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_boneduino_m0_express.menu.opt.faster=Faster (-O3)
+duinopeak_boneduino_m0_express.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_boneduino_m0_express.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_boneduino_m0_express.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_boneduino_m0_express.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_boneduino_m0_express.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_boneduino_m0_express.menu.usbstack.arduino=Arduino
+duinopeak_boneduino_m0_express.menu.usbstack.tinyusb=TinyUSB
+duinopeak_boneduino_m0_express.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_boneduino_m0_express.menu.debug.off=Off
+duinopeak_boneduino_m0_express.menu.debug.on=On
+duinopeak_boneduino_m0_express.menu.debug.on.build.flags.debug=-g
+
+
+#duinopeak_radio_m0.name=Duinopeak M0 Radio (Native USB Port)
+#duinopeak_radio_m0.vid.0=0x239A
+#duinopeak_radio_m0.pid.0=0x8014
+#duinopeak_radio_m0.vid.1=0x239A
+#duinopeak_radio_m0.pid.1=0x0014
+#duinopeak_radio_m0.upload.tool=bossac
+#duinopeak_radio_m0.upload.protocol=sam-ba
+#duinopeak_radio_m0.upload.maximum_size=262144
+#duinopeak_radio_m0.upload.use_1200bps_touch=true
+#duinopeak_radio_m0.upload.wait_for_upload_port=true
+#duinopeak_radio_m0.upload.native_usb=true
+#duinopeak_radio_m0.build.mcu=cortex-m0plus
+#duinopeak_radio_m0.build.f_cpu=48000000L
+#duinopeak_radio_m0.build.usb_product="Radio M0"
+#duinopeak_radio_m0.build.usb_manufacturer="Duinopeak"
+#duinopeak_radio_m0.build.board=SAMD_ZERO
+#duinopeak_radio_m0.build.core=arduino
+#duinopeak_radio_m0.build.extra_flags=-D__SAMR21G18A__ -DARM_MATH_CM0PLUS {build.usb_flags}
+#duinopeak_radio_m0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+#duinopeak_radio_m0.build.openocdscript=openocd_scripts/zero_radio.cfg
+#duinopeak_radio_m0.build.variant=zero_radio
+#duinopeak_radio_m0.build.variant_system_lib=
+#duinopeak_radio_m0.build.vid=0x239A
+#duinopeak_radio_m0.build.pid=0x8014
+#duinopeak_radio_m0.bootloader.tool=openocd
+#duinopeak_radio_m0.bootloader.file=boneduino/samr21_sam_ba.bin
+
+# Duinopeak Metro M0 Express (SAMD21)
+# ------------------------------
+duinopeak_metro_m0.name=Duinopeak Metro M0 Express
+duinopeak_metro_m0.vid.0=0x239A
+duinopeak_metro_m0.pid.0=0x8013
+duinopeak_metro_m0.vid.1=0x239A
+duinopeak_metro_m0.pid.1=0x0013
+duinopeak_metro_m0.upload.tool=bossac
+duinopeak_metro_m0.upload.protocol=sam-ba
+duinopeak_metro_m0.upload.maximum_size=262144
+duinopeak_metro_m0.upload.offset=0x2000
+duinopeak_metro_m0.upload.use_1200bps_touch=true
+duinopeak_metro_m0.upload.wait_for_upload_port=true
+duinopeak_metro_m0.upload.native_usb=true
+duinopeak_metro_m0.build.mcu=cortex-m0plus
+duinopeak_metro_m0.build.f_cpu=48000000L
+duinopeak_metro_m0.build.usb_product="Metro M0 Express"
+duinopeak_metro_m0.build.usb_manufacturer="Duinopeak"
+duinopeak_metro_m0.build.board=SAMD_ZERO
+duinopeak_metro_m0.build.core=arduino
+duinopeak_metro_m0.build.extra_flags=-D__SAMD21G18A__ -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS -DDUINOPEAK_METRO_M0_EXPRESS {build.usb_flags}
+duinopeak_metro_m0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_metro_m0.build.openocdscript=openocd_scripts/metro_m0.cfg
+duinopeak_metro_m0.build.variant=metro_m0
+duinopeak_metro_m0.build.variant_system_lib=
+duinopeak_metro_m0.build.vid=0x239A
+duinopeak_metro_m0.build.pid=0x8013
+duinopeak_metro_m0.bootloader.tool=openocd
+duinopeak_metro_m0.bootloader.file=metroM0/bootloader-metro_m0-v2.0.0-duinopeak.5.bin
+duinopeak_metro_m0.menu.opt.small=Small (-Os) (standard)
+duinopeak_metro_m0.menu.opt.small.build.flags.optimize=-Os
+duinopeak_metro_m0.menu.opt.fast=Fast (-O2)
+duinopeak_metro_m0.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_metro_m0.menu.opt.faster=Faster (-O3)
+duinopeak_metro_m0.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_metro_m0.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_metro_m0.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_metro_m0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_metro_m0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_metro_m0.menu.usbstack.arduino=Arduino
+duinopeak_metro_m0.menu.usbstack.tinyusb=TinyUSB
+duinopeak_metro_m0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_metro_m0.menu.debug.off=Off
+duinopeak_metro_m0.menu.debug.on=On
+duinopeak_metro_m0.menu.debug.on.build.flags.debug=-g
+
+
+# Duinopeak Pywearable Express (SAMD21)
+# ------------------------------
+duinopeak_circuitplayground_m0.name=Duinopeak Pywearable Express
+duinopeak_circuitplayground_m0.vid.0=0x239A
+duinopeak_circuitplayground_m0.pid.0=0x8018
+duinopeak_circuitplayground_m0.vid.1=0x239A
+duinopeak_circuitplayground_m0.pid.1=0x0019
+duinopeak_circuitplayground_m0.upload.tool=bossac
+duinopeak_circuitplayground_m0.upload.protocol=sam-ba
+duinopeak_circuitplayground_m0.upload.maximum_size=262144
+duinopeak_circuitplayground_m0.upload.offset=0x2000
+duinopeak_circuitplayground_m0.upload.use_1200bps_touch=true
+duinopeak_circuitplayground_m0.upload.wait_for_upload_port=true
+duinopeak_circuitplayground_m0.upload.native_usb=true
+duinopeak_circuitplayground_m0.build.mcu=cortex-m0plus
+duinopeak_circuitplayground_m0.build.f_cpu=48000000L
+duinopeak_circuitplayground_m0.build.usb_product="Pywearable Express"
+duinopeak_circuitplayground_m0.build.usb_manufacturer="Duinopeak"
+duinopeak_circuitplayground_m0.build.board=SAMD_CIRCUITPLAYGROUND_EXPRESS
+duinopeak_circuitplayground_m0.build.core=arduino
+duinopeak_circuitplayground_m0.build.extra_flags=-DCRYSTALLESS -DARDUINO_SAMD_ZERO -D__SAMD21G18A__ -DARM_MATH_CM0PLUS -DDUINOPEAK_CIRCUITPLAYGROUND_M0 {build.usb_flags}
+duinopeak_circuitplayground_m0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_circuitplayground_m0.build.openocdscript=openocd_scripts/circuit_play.cfg
+duinopeak_circuitplayground_m0.build.variant=pywearable
+duinopeak_circuitplayground_m0.build.variant_system_lib=
+duinopeak_circuitplayground_m0.build.vid=0x239A
+duinopeak_circuitplayground_m0.build.pid=0x8018
+duinopeak_circuitplayground_m0.bootloader.tool=openocd
+duinopeak_circuitplayground_m0.bootloader.file=boneduino_pywearable/bootloader-boneduino_pywearable-3.11.0-18-g5301af7-dirty.bin
+duinopeak_circuitplayground_m0.menu.opt.small=Small (-Os) (standard)
+duinopeak_circuitplayground_m0.menu.opt.small.build.flags.optimize=-Os
+duinopeak_circuitplayground_m0.menu.opt.fast=Fast (-O2)
+duinopeak_circuitplayground_m0.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_circuitplayground_m0.menu.opt.faster=Faster (-O3)
+duinopeak_circuitplayground_m0.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_circuitplayground_m0.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_circuitplayground_m0.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_circuitplayground_m0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_circuitplayground_m0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_circuitplayground_m0.menu.usbstack.arduino=Arduino
+duinopeak_circuitplayground_m0.menu.usbstack.tinyusb=TinyUSB
+duinopeak_circuitplayground_m0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_circuitplayground_m0.menu.debug.off=Off
+duinopeak_circuitplayground_m0.menu.debug.on=On
+duinopeak_circuitplayground_m0.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak HalloWing M0 (SAMD21)
+# ------------------------------
+duinopeak_hallowing.name=Duinopeak Hallowing M0
+duinopeak_hallowing.vid.0=0x239A
+duinopeak_hallowing.pid.0=0xDEAD
+duinopeak_hallowing.vid.1=0x239A
+duinopeak_hallowing.pid.1=0xD1ED
+duinopeak_hallowing.vid.1=0x239A
+duinopeak_hallowing.pid.1=0xB000
+duinopeak_hallowing.upload.tool=bossac
+duinopeak_hallowing.upload.protocol=sam-ba
+duinopeak_hallowing.upload.maximum_size=262144
+duinopeak_hallowing.upload.offset=0x2000
+duinopeak_hallowing.upload.use_1200bps_touch=true
+duinopeak_hallowing.upload.wait_for_upload_port=true
+duinopeak_hallowing.upload.native_usb=true
+duinopeak_hallowing.build.mcu=cortex-m0plus
+duinopeak_hallowing.build.f_cpu=48000000L
+duinopeak_hallowing.build.usb_product="Hallowing M0"
+duinopeak_hallowing.build.usb_manufacturer="Duinopeak"
+duinopeak_hallowing.build.board=SAMD_HALLOWING
+duinopeak_hallowing.build.core=arduino
+duinopeak_hallowing.build.extra_flags=-DCRYSTALLESS -DARDUINO_SAMD_ZERO -DARDUINO_SAMD_HALLOWING_M0 -DARM_MATH_CM0PLUS -DDUINOPEAK_HALLOWING -D__SAMD21G18A__ {build.usb_flags}
+duinopeak_hallowing.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_hallowing.build.openocdscript=openocd_scripts/hallowing_m0_express.cfg
+duinopeak_hallowing.build.variant=hallowing_m0_express
+duinopeak_hallowing.build.variant_system_lib=
+duinopeak_hallowing.build.vid=0x239A
+duinopeak_hallowing.build.pid=0xDEAD
+duinopeak_hallowing.bootloader.tool=openocd
+duinopeak_hallowing.bootloader.file=hallowingM0/bootloader-hallowing_m0-v2.0.0-duinopeak.0-21-g887cc30.bin
+duinopeak_hallowing.menu.opt.small=Small (-Os) (standard)
+duinopeak_hallowing.menu.opt.small.build.flags.optimize=-Os
+duinopeak_hallowing.menu.opt.fast=Fast (-O2)
+duinopeak_hallowing.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_hallowing.menu.opt.faster=Faster (-O3)
+duinopeak_hallowing.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_hallowing.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_hallowing.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_hallowing.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_hallowing.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_hallowing.menu.usbstack.arduino=Arduino
+duinopeak_hallowing.menu.usbstack.tinyusb=TinyUSB
+duinopeak_hallowing.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_hallowing.menu.debug.off=Off
+duinopeak_hallowing.menu.debug.on=On
+duinopeak_hallowing.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak Metro M4 (SAMD51)
+# ------------------------------
+duinopeak_metro_m4.name=Duinopeak Metro M4 (SAMD51)
+duinopeak_metro_m4.vid.0=0x239A
+duinopeak_metro_m4.pid.0=0x8020
+duinopeak_metro_m4.vid.1=0x239A
+duinopeak_metro_m4.pid.1=0x0020
+duinopeak_metro_m4.upload.tool=bossac18
+duinopeak_metro_m4.upload.protocol=sam-ba
+duinopeak_metro_m4.upload.maximum_size=507904
+duinopeak_metro_m4.upload.offset=0x4000
+duinopeak_metro_m4.upload.use_1200bps_touch=true
+duinopeak_metro_m4.upload.wait_for_upload_port=true
+duinopeak_metro_m4.upload.native_usb=true
+duinopeak_metro_m4.build.mcu=cortex-m4
+#duinopeak_metro_m4.build.f_cpu=120000000L
+duinopeak_metro_m4.build.usb_product="Duinopeak Metro M4"
+duinopeak_metro_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_metro_m4.build.board=METRO_M4
+duinopeak_metro_m4.build.core=arduino
+duinopeak_metro_m4.build.extra_flags=-D__SAMD51J19A__ -DDUINOPEAK_METRO_M4_EXPRESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_metro_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_metro_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_metro_m4.build.variant=metro_m4
+duinopeak_metro_m4.build.variant_system_lib=
+duinopeak_metro_m4.build.vid=0x239A
+duinopeak_metro_m4.build.pid=0x8020
+duinopeak_metro_m4.bootloader.tool=openocd
+duinopeak_metro_m4.bootloader.file=metroM4/bootloader-metro_m4-v2.0.0-duinopeak.5.bin
+duinopeak_metro_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_metro_m4.menu.cache.on=Enabled
+duinopeak_metro_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_metro_m4.menu.cache.off=Disabled
+duinopeak_metro_m4.menu.cache.off.build.cache_flags=
+duinopeak_metro_m4.menu.speed.120=120 MHz (standard)
+duinopeak_metro_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_metro_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_metro_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_metro_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_metro_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_metro_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_metro_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_metro_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_metro_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_metro_m4.menu.opt.fast=Fast (-O2)
+duinopeak_metro_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_metro_m4.menu.opt.faster=Faster (-O3)
+duinopeak_metro_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_metro_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_metro_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_metro_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_metro_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_metro_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_metro_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_metro_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_metro_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_metro_m4.menu.usbstack.arduino=Arduino
+duinopeak_metro_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_metro_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_metro_m4.menu.debug.off=Off
+duinopeak_metro_m4.menu.debug.on=On
+duinopeak_metro_m4.menu.debug.on.build.flags.debug=-g
+
+
+# Duinopeak Grand Central M4 (SAMD51)
+# ------------------------------
+duinopeak_grandcentral_m4.name=Duinopeak Grand Central M4 (SAMD51)
+duinopeak_grandcentral_m4.vid.0=0x239A
+duinopeak_grandcentral_m4.pid.0=0x8031
+duinopeak_grandcentral_m4.vid.1=0x239A
+duinopeak_grandcentral_m4.pid.1=0x0031
+duinopeak_grandcentral_m4.vid.1=0x239A
+duinopeak_grandcentral_m4.pid.1=0x0032
+duinopeak_grandcentral_m4.upload.tool=bossac18
+duinopeak_grandcentral_m4.upload.protocol=sam-ba
+duinopeak_grandcentral_m4.upload.maximum_size=1032192
+duinopeak_grandcentral_m4.upload.offset=0x4000
+duinopeak_grandcentral_m4.upload.use_1200bps_touch=true
+duinopeak_grandcentral_m4.upload.wait_for_upload_port=true
+duinopeak_grandcentral_m4.upload.native_usb=true
+duinopeak_grandcentral_m4.build.mcu=cortex-m4
+#duinopeak_grandcentral_m4.build.f_cpu=120000000L
+duinopeak_grandcentral_m4.build.usb_product="Duinopeak Grand Central M4"
+duinopeak_grandcentral_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_grandcentral_m4.build.board=GRAND_CENTRAL_M4
+duinopeak_grandcentral_m4.build.core=arduino
+duinopeak_grandcentral_m4.build.extra_flags=-D__SAMD51P20A__ -DDUINOPEAK_GRAND_CENTRAL_M4 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_grandcentral_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_grandcentral_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_grandcentral_m4.build.variant=grand_central_m4
+duinopeak_grandcentral_m4.build.variant_system_lib=
+duinopeak_grandcentral_m4.build.vid=0x239A
+duinopeak_grandcentral_m4.build.pid=0x8031
+duinopeak_grandcentral_m4.bootloader.tool=openocd
+duinopeak_grandcentral_m4.bootloader.file=grand_central_m4/bootloader-grandcentral_m4.bin
+duinopeak_grandcentral_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_grandcentral_m4.menu.cache.on=Enabled
+duinopeak_grandcentral_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_grandcentral_m4.menu.cache.off=Disabled
+duinopeak_grandcentral_m4.menu.cache.off.build.cache_flags=
+duinopeak_grandcentral_m4.menu.speed.120=120 MHz (standard)
+duinopeak_grandcentral_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_grandcentral_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_grandcentral_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_grandcentral_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_grandcentral_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_grandcentral_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_grandcentral_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_grandcentral_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_grandcentral_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_grandcentral_m4.menu.opt.fast=Fast (-O2)
+duinopeak_grandcentral_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_grandcentral_m4.menu.opt.faster=Faster (-O3)
+duinopeak_grandcentral_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_grandcentral_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_grandcentral_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_grandcentral_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_grandcentral_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_grandcentral_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_grandcentral_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_grandcentral_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_grandcentral_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_grandcentral_m4.menu.usbstack.arduino=Arduino
+duinopeak_grandcentral_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_grandcentral_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_grandcentral_m4.menu.debug.off=Off
+duinopeak_grandcentral_m4.menu.debug.on=On
+duinopeak_grandcentral_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak Boneduino M4 Express (SAMD51)
+# ------------------------------
+duinopeak_boneduino_m4.name=Duinopeak Boneduino M4 Express (SAMD51)
+duinopeak_boneduino_m4.vid.0=0x239A
+duinopeak_boneduino_m4.pid.0=0x8022
+duinopeak_boneduino_m4.vid.1=0x239A
+duinopeak_boneduino_m4.pid.1=0x0022
+duinopeak_boneduino_m4.upload.tool=bossac18
+duinopeak_boneduino_m4.upload.protocol=sam-ba
+duinopeak_boneduino_m4.upload.maximum_size=507904
+duinopeak_boneduino_m4.upload.offset=0x4000
+duinopeak_boneduino_m4.upload.use_1200bps_touch=true
+duinopeak_boneduino_m4.upload.wait_for_upload_port=true
+duinopeak_boneduino_m4.upload.native_usb=true
+duinopeak_boneduino_m4.build.mcu=cortex-m4
+#duinopeak_boneduino_m4.build.f_cpu=120000000L
+duinopeak_boneduino_m4.build.usb_product="Duinopeak Boneduino M4"
+duinopeak_boneduino_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_boneduino_m4.build.board=BONEDUINO_M4
+duinopeak_boneduino_m4.build.core=arduino
+duinopeak_boneduino_m4.build.extra_flags=-D__SAMD51J19A__ -DDUINOPEAK_BONEDUINO_M4_EXPRESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_boneduino_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_boneduino_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_boneduino_m4.build.variant=boneduino_m4
+duinopeak_boneduino_m4.build.variant_system_lib=
+duinopeak_boneduino_m4.build.vid=0x239A
+duinopeak_boneduino_m4.build.pid=0x8022
+duinopeak_boneduino_m4.bootloader.tool=openocd
+duinopeak_boneduino_m4.bootloader.file=boneduinoM4/bootloader-boneduino_m4_express-3.11.0-18-g5301af7-dirty.bin
+duinopeak_boneduino_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16 
+duinopeak_boneduino_m4.menu.cache.on=Enabled
+duinopeak_boneduino_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_boneduino_m4.menu.cache.off=Disabled
+duinopeak_boneduino_m4.menu.cache.off.build.cache_flags=
+duinopeak_boneduino_m4.menu.speed.120=120 MHz (standard)
+duinopeak_boneduino_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_boneduino_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_boneduino_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_boneduino_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_boneduino_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_boneduino_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_boneduino_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_boneduino_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_boneduino_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_boneduino_m4.menu.opt.fast=Fast (-O2)
+duinopeak_boneduino_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_boneduino_m4.menu.opt.faster=Faster (-O3)
+duinopeak_boneduino_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_boneduino_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_boneduino_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_boneduino_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_boneduino_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_boneduino_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_boneduino_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_boneduino_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_boneduino_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_boneduino_m4.menu.usbstack.arduino=Arduino
+duinopeak_boneduino_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_boneduino_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_boneduino_m4.menu.debug.off=Off
+duinopeak_boneduino_m4.menu.debug.on=On
+duinopeak_boneduino_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak Boneduino M4 CAN (SAME51)
+# ------------------------------
+duinopeak_boneduino_m4_can.name=Duinopeak Boneduino M4 CAN (SAME51)
+duinopeak_boneduino_m4_can.vid.0=0x239A
+duinopeak_boneduino_m4_can.pid.0=0x80CD
+duinopeak_boneduino_m4_can.vid.1=0x239A
+duinopeak_boneduino_m4_can.pid.1=0x00CD
+duinopeak_boneduino_m4_can.upload.tool=bossac18
+duinopeak_boneduino_m4_can.upload.protocol=sam-ba
+duinopeak_boneduino_m4_can.upload.maximum_size=507904
+duinopeak_boneduino_m4_can.upload.offset=0x4000
+duinopeak_boneduino_m4_can.upload.use_1200bps_touch=true
+duinopeak_boneduino_m4_can.upload.wait_for_upload_port=true
+duinopeak_boneduino_m4_can.upload.native_usb=true
+duinopeak_boneduino_m4_can.build.mcu=cortex-m4
+#duinopeak_boneduino_m4_can.build.f_cpu=120000000L
+duinopeak_boneduino_m4_can.build.usb_product="Duinopeak Boneduino M4 CAN"
+duinopeak_boneduino_m4_can.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_boneduino_m4_can.build.board=BONEDUINO_M4_CAN
+duinopeak_boneduino_m4_can.build.core=arduino
+duinopeak_boneduino_m4_can.build.extra_flags=-D__SAME51J19A__ -DDUINOPEAK_BONEDUINO_M4_EXPRESS -DDUINOPEAK_BONEDUINO_M4_CAN -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_boneduino_m4_can.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_boneduino_m4_can.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_boneduino_m4_can.build.variant=boneduino_m4_can
+duinopeak_boneduino_m4_can.build.variant_system_lib=
+duinopeak_boneduino_m4_can.build.vid=0x239A
+duinopeak_boneduino_m4_can.build.pid=0x80CD
+duinopeak_boneduino_m4_can.bootloader.tool=openocd
+duinopeak_boneduino_m4_can.bootloader.file=boneduinoM4/bootloader-boneduino_m4_express-v2.0.0-duinopeak.5.bin
+duinopeak_boneduino_m4_can.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_boneduino_m4_can.menu.cache.on=Enabled
+duinopeak_boneduino_m4_can.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_boneduino_m4_can.menu.cache.off=Disabled
+duinopeak_boneduino_m4_can.menu.cache.off.build.cache_flags=
+duinopeak_boneduino_m4_can.menu.speed.120=120 MHz (standard)
+duinopeak_boneduino_m4_can.menu.speed.120.build.f_cpu=120000000L
+duinopeak_boneduino_m4_can.menu.speed.150=150 MHz (overclock)
+duinopeak_boneduino_m4_can.menu.speed.150.build.f_cpu=150000000L
+duinopeak_boneduino_m4_can.menu.speed.180=180 MHz (overclock)
+duinopeak_boneduino_m4_can.menu.speed.180.build.f_cpu=180000000L
+duinopeak_boneduino_m4_can.menu.speed.200=200 MHz (overclock)
+duinopeak_boneduino_m4_can.menu.speed.200.build.f_cpu=200000000L
+duinopeak_boneduino_m4_can.menu.opt.small=Small (-Os) (standard)
+duinopeak_boneduino_m4_can.menu.opt.small.build.flags.optimize=-Os
+duinopeak_boneduino_m4_can.menu.opt.fast=Fast (-O2)
+duinopeak_boneduino_m4_can.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_boneduino_m4_can.menu.opt.faster=Faster (-O3)
+duinopeak_boneduino_m4_can.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_boneduino_m4_can.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_boneduino_m4_can.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_boneduino_m4_can.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_boneduino_m4_can.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_boneduino_m4_can.menu.maxqspi.50=50 MHz (standard)
+duinopeak_boneduino_m4_can.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_boneduino_m4_can.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_boneduino_m4_can.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_boneduino_m4_can.menu.usbstack.arduino=Arduino
+duinopeak_boneduino_m4_can.menu.usbstack.tinyusb=TinyUSB
+duinopeak_boneduino_m4_can.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_boneduino_m4_can.menu.debug.off=Off
+duinopeak_boneduino_m4_can.menu.debug.on=On
+duinopeak_boneduino_m4_can.menu.debug.on.build.flags.debug=-g
+
+
+# Duinopeak Trellis M4 (SAMD51)
+# ------------------------------
+duinopeak_trellis_m4.name=Duinopeak Trellis M4 (SAMD51)
+duinopeak_trellis_m4.vid.0=0x239A
+duinopeak_trellis_m4.pid.0=0x802F
+duinopeak_trellis_m4.vid.1=0x239A
+duinopeak_trellis_m4.pid.1=0x002F
+duinopeak_trellis_m4.vid.2=0x239A
+duinopeak_trellis_m4.pid.2=0x0030
+duinopeak_trellis_m4.upload.tool=bossac18
+duinopeak_trellis_m4.upload.protocol=sam-ba
+duinopeak_trellis_m4.upload.maximum_size=507904
+duinopeak_trellis_m4.upload.offset=0x4000
+duinopeak_trellis_m4.upload.use_1200bps_touch=true
+duinopeak_trellis_m4.upload.wait_for_upload_port=true
+duinopeak_trellis_m4.upload.native_usb=true
+duinopeak_trellis_m4.build.mcu=cortex-m4
+#duinopeak_trellis_m4.build.f_cpu=120000000L
+duinopeak_trellis_m4.build.usb_product="Duinopeak Trellis M4"
+duinopeak_trellis_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_trellis_m4.build.board=TRELLIS_M4
+duinopeak_trellis_m4.build.core=arduino
+duinopeak_trellis_m4.build.extra_flags=-D__SAMD51G19A__ -DDUINOPEAK_TRELLIS_M4_EXPRESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -DCRYSTALLESS -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_trellis_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_trellis_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_trellis_m4.build.variant=trellis_m4
+duinopeak_trellis_m4.build.variant_system_lib=
+duinopeak_trellis_m4.build.vid=0x239A
+duinopeak_trellis_m4.build.pid=0x802F
+duinopeak_trellis_m4.bootloader.tool=openocd
+duinopeak_trellis_m4.bootloader.file=trellisM4/bootloader-trellis_m4-v2.0.0-duinopeak.5.bin
+duinopeak_trellis_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_trellis_m4.menu.cache.on=Enabled
+duinopeak_trellis_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_trellis_m4.menu.cache.off=Disabled
+duinopeak_trellis_m4.menu.cache.off.build.cache_flags=
+duinopeak_trellis_m4.menu.speed.120=120 MHz (standard)
+duinopeak_trellis_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_trellis_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_trellis_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_trellis_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_trellis_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_trellis_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_trellis_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_trellis_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_trellis_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_trellis_m4.menu.opt.fast=Fast (-O2)
+duinopeak_trellis_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_trellis_m4.menu.opt.faster=Faster (-O3)
+duinopeak_trellis_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_trellis_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_trellis_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_trellis_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_trellis_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_trellis_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_trellis_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_trellis_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_trellis_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_trellis_m4.menu.usbstack.arduino=Arduino
+duinopeak_trellis_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_trellis_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_trellis_m4.menu.debug.off=Off
+duinopeak_trellis_m4.menu.debug.on=On
+duinopeak_trellis_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak PyPortal M4 (SAMD51)
+# ------------------------------
+duinopeak_pyportal_m4.name=Duinopeak PyPortal M4 (SAMD51)
+duinopeak_pyportal_m4.vid.0=0x239A
+duinopeak_pyportal_m4.pid.0=0x8035
+duinopeak_pyportal_m4.vid.1=0x239A
+duinopeak_pyportal_m4.pid.1=0x0035
+duinopeak_pyportal_m4.upload.tool=bossac18
+duinopeak_pyportal_m4.upload.protocol=sam-ba
+duinopeak_pyportal_m4.upload.maximum_size=1032192
+duinopeak_pyportal_m4.upload.offset=0x4000
+duinopeak_pyportal_m4.upload.use_1200bps_touch=true
+duinopeak_pyportal_m4.upload.wait_for_upload_port=true
+duinopeak_pyportal_m4.upload.native_usb=true
+duinopeak_pyportal_m4.build.mcu=cortex-m4
+#duinopeak_pyportal_m4.build.f_cpu=120000000L
+duinopeak_pyportal_m4.build.usb_product="Duinopeak PyPortal M4"
+duinopeak_pyportal_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_pyportal_m4.build.board=PYPORTAL_M4
+duinopeak_pyportal_m4.build.core=arduino
+duinopeak_pyportal_m4.build.extra_flags=-D__SAMD51J20A__ -DDUINOPEAK_PYPORTAL -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pyportal_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_pyportal_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_pyportal_m4.build.variant=pyportal_m4
+duinopeak_pyportal_m4.build.variant_system_lib=
+duinopeak_pyportal_m4.build.vid=0x239A
+duinopeak_pyportal_m4.build.pid=0x8035
+duinopeak_pyportal_m4.bootloader.tool=openocd
+duinopeak_pyportal_m4.bootloader.file=boneduino_pyportal_m4/bootloader-boneduino_pyportal_m4-3.11.0-18-g5301af7-dirty.bin
+duinopeak_pyportal_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pyportal_m4.menu.cache.on=Enabled
+duinopeak_pyportal_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_pyportal_m4.menu.cache.off=Disabled
+duinopeak_pyportal_m4.menu.cache.off.build.cache_flags=
+duinopeak_pyportal_m4.menu.speed.120=120 MHz (standard)
+duinopeak_pyportal_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_pyportal_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_pyportal_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_pyportal_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_pyportal_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_pyportal_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_pyportal_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_pyportal_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_pyportal_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_pyportal_m4.menu.opt.fast=Fast (-O2)
+duinopeak_pyportal_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_pyportal_m4.menu.opt.faster=Faster (-O3)
+duinopeak_pyportal_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_pyportal_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_pyportal_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_pyportal_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_pyportal_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_pyportal_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_pyportal_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_pyportal_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_pyportal_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_pyportal_m4.menu.usbstack.arduino=Arduino
+duinopeak_pyportal_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_pyportal_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_pyportal_m4.menu.debug.off=Off
+duinopeak_pyportal_m4.menu.debug.on=On
+duinopeak_pyportal_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak pyBadge M4 (SAMD51)
+# ------------------------------
+duinopeak_pybadge_m4.name=Duinopeak pyBadge M4 Express (SAMD51)
+duinopeak_pybadge_m4.vid.0=0x239A
+duinopeak_pybadge_m4.pid.0=0x8033
+duinopeak_pybadge_m4.vid.1=0x239A
+duinopeak_pybadge_m4.pid.1=0x0033
+duinopeak_pybadge_m4.vid.1=0x239A
+duinopeak_pybadge_m4.pid.1=0x8033
+duinopeak_pybadge_m4.upload.tool=bossac18
+duinopeak_pybadge_m4.upload.protocol=sam-ba
+duinopeak_pybadge_m4.upload.maximum_size=507904
+duinopeak_pybadge_m4.upload.offset=0x4000
+duinopeak_pybadge_m4.upload.use_1200bps_touch=true
+duinopeak_pybadge_m4.upload.wait_for_upload_port=true
+duinopeak_pybadge_m4.upload.native_usb=true
+duinopeak_pybadge_m4.build.mcu=cortex-m4
+#duinopeak_pybadge_m4.build.f_cpu=120000000L
+duinopeak_pybadge_m4.build.usb_product="Duinopeak pyBadge M4"
+duinopeak_pybadge_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_pybadge_m4.build.board=PYBADGE_M4
+duinopeak_pybadge_m4.build.core=arduino
+duinopeak_pybadge_m4.build.extra_flags=-D__SAMD51J19A__ -DDUINOPEAK_PYBADGE_M4_EXPRESS -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pybadge_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_pybadge_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_pybadge_m4.build.variant=pybadge_m4
+duinopeak_pybadge_m4.build.variant_system_lib=
+duinopeak_pybadge_m4.build.vid=0x239A
+duinopeak_pybadge_m4.build.pid=0x8033
+duinopeak_pybadge_m4.bootloader.tool=openocd
+duinopeak_pybadge_m4.bootloader.file=boneduino_pygamer_m4_lc/bootloader-boneduino_pygamer_m4_lc-3.11.0-18-g5301af7-dirty.bin
+duinopeak_pybadge_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pybadge_m4.menu.cache.on=Enabled
+duinopeak_pybadge_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_pybadge_m4.menu.cache.off=Disabled
+duinopeak_pybadge_m4.menu.cache.off.build.cache_flags=
+duinopeak_pybadge_m4.menu.speed.120=120 MHz (standard)
+duinopeak_pybadge_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_pybadge_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_pybadge_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_pybadge_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_pybadge_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_pybadge_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_pybadge_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_pybadge_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_pybadge_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_pybadge_m4.menu.opt.fast=Fast (-O2)
+duinopeak_pybadge_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_pybadge_m4.menu.opt.faster=Faster (-O3)
+duinopeak_pybadge_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_pybadge_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_pybadge_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_pybadge_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_pybadge_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_pybadge_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_pybadge_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_pybadge_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_pybadge_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_pybadge_m4.menu.usbstack.arduino=Arduino
+duinopeak_pybadge_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_pybadge_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_pybadge_m4.menu.debug.off=Off
+duinopeak_pybadge_m4.menu.debug.on=On
+duinopeak_pybadge_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak pyGamer M4 Express (SAMD51)
+# ------------------------------
+duinopeak_pygamer_m4.name=Duinopeak PyGamer M4 Express (SAMD51)
+duinopeak_pygamer_m4.vid.0=0x239A
+duinopeak_pygamer_m4.pid.0=0x803D
+duinopeak_pygamer_m4.vid.1=0x239A
+duinopeak_pygamer_m4.pid.1=0x003D
+duinopeak_pygamer_m4.vid.1=0x239A
+duinopeak_pygamer_m4.pid.1=0x803E
+duinopeak_pygamer_m4.upload.tool=bossac18
+duinopeak_pygamer_m4.upload.protocol=sam-ba
+duinopeak_pygamer_m4.upload.maximum_size=507904
+duinopeak_pygamer_m4.upload.offset=0x4000
+duinopeak_pygamer_m4.upload.use_1200bps_touch=true
+duinopeak_pygamer_m4.upload.wait_for_upload_port=true
+duinopeak_pygamer_m4.upload.native_usb=true
+duinopeak_pygamer_m4.build.mcu=cortex-m4
+#duinopeak_pygamer_m4.build.f_cpu=120000000L
+duinopeak_pygamer_m4.build.usb_product="Duinopeak PyGamer M4"
+duinopeak_pygamer_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_pygamer_m4.build.board=PYGAMER_M4
+duinopeak_pygamer_m4.build.core=arduino
+duinopeak_pygamer_m4.build.extra_flags=-D__SAMD51J19A__ -DDUINOPEAK_PYGAMER_M4_EXPRESS -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pygamer_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_pygamer_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_pygamer_m4.build.variant=pygamer_m4
+duinopeak_pygamer_m4.build.variant_system_lib=
+duinopeak_pygamer_m4.build.vid=0x239A
+duinopeak_pygamer_m4.build.pid=0x803D
+duinopeak_pygamer_m4.bootloader.tool=openocd
+duinopeak_pygamer_m4.bootloader.file=boneduino_pygamer_m4_lc/bootloader-boneduino_pygamer_m4-3.11.0-18-g5301af7-dirty.bin
+duinopeak_pygamer_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pygamer_m4.menu.cache.on=Enabled
+duinopeak_pygamer_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_pygamer_m4.menu.cache.off=Disabled
+duinopeak_pygamer_m4.menu.cache.off.build.cache_flags=
+duinopeak_pygamer_m4.menu.speed.120=120 MHz (standard)
+duinopeak_pygamer_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_pygamer_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_pygamer_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_pygamer_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_pygamer_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_pygamer_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_pygamer_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_pygamer_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_pygamer_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_pygamer_m4.menu.opt.fast=Fast (-O2)
+duinopeak_pygamer_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_pygamer_m4.menu.opt.faster=Faster (-O3)
+duinopeak_pygamer_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_pygamer_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_pygamer_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_pygamer_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_pygamer_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_pygamer_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_pygamer_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_pygamer_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_pygamer_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_pygamer_m4.menu.usbstack.arduino=Arduino
+duinopeak_pygamer_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_pygamer_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_pygamer_m4.menu.debug.off=Off
+duinopeak_pygamer_m4.menu.debug.on=On
+duinopeak_pygamer_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak pyGamer Advance M4 Express (SAMD51)
+# ------------------------------
+duinopeak_pygamer_advance_m4.name=Duinopeak PyGamer Advance M4 (SAMD51)
+duinopeak_pygamer_advance_m4.vid.0=0x239A
+duinopeak_pygamer_advance_m4.pid.0=0x8041
+duinopeak_pygamer_advance_m4.vid.1=0x239A
+duinopeak_pygamer_advance_m4.pid.1=0x0041
+duinopeak_pygamer_advance_m4.vid.1=0x239A
+duinopeak_pygamer_advance_m4.pid.1=0x8042
+duinopeak_pygamer_advance_m4.upload.tool=bossac18
+duinopeak_pygamer_advance_m4.upload.protocol=sam-ba
+duinopeak_pygamer_advance_m4.upload.maximum_size=1032192
+duinopeak_pygamer_advance_m4.upload.offset=0x4000
+duinopeak_pygamer_advance_m4.upload.use_1200bps_touch=true
+duinopeak_pygamer_advance_m4.upload.wait_for_upload_port=true
+duinopeak_pygamer_advance_m4.upload.native_usb=true
+duinopeak_pygamer_advance_m4.build.mcu=cortex-m4
+duinopeak_pygamer_advance_m4.build.usb_product="Duinopeak PyGamer Advance M4"
+duinopeak_pygamer_advance_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_pygamer_advance_m4.build.board=PYGAMER_ADVANCE_M4
+duinopeak_pygamer_advance_m4.build.core=arduino
+duinopeak_pygamer_advance_m4.build.extra_flags=-D__SAMD51J20A__ -DDUINOPEAK_PYGAMER_ADVANCE_M4_EXPRESS -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pygamer_advance_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_pygamer_advance_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_pygamer_advance_m4.build.variant=pygamer_advance_m4
+duinopeak_pygamer_advance_m4.build.variant_system_lib=
+duinopeak_pygamer_advance_m4.build.vid=0x239A
+duinopeak_pygamer_advance_m4.build.pid=0x8041
+duinopeak_pygamer_advance_m4.bootloader.tool=openocd
+duinopeak_pygamer_advance_m4.bootloader.file=boneduino_pygamer_m4/bootloader-boneduino_m4-v2.0.0-duinopeak.5.bin
+duinopeak_pygamer_advance_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_pygamer_advance_m4.menu.cache.on=Enabled
+duinopeak_pygamer_advance_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_pygamer_advance_m4.menu.cache.off=Disabled
+duinopeak_pygamer_advance_m4.menu.cache.off.build.cache_flags=
+duinopeak_pygamer_advance_m4.menu.speed.120=120 MHz (standard)
+duinopeak_pygamer_advance_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_pygamer_advance_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_pygamer_advance_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_pygamer_advance_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_pygamer_advance_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_pygamer_advance_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_pygamer_advance_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_pygamer_advance_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_pygamer_advance_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_pygamer_advance_m4.menu.opt.fast=Fast (-O2)
+duinopeak_pygamer_advance_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_pygamer_advance_m4.menu.opt.faster=Faster (-O3)
+duinopeak_pygamer_advance_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_pygamer_advance_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_pygamer_advance_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_pygamer_advance_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_pygamer_advance_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_pygamer_advance_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_pygamer_advance_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_pygamer_advance_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_pygamer_advance_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_pygamer_advance_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_pygamer_advance_m4.menu.usbstack.arduino=Arduino
+duinopeak_pygamer_advance_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_pygamer_advance_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_pygamer_advance_m4.menu.debug.off=Off
+duinopeak_pygamer_advance_m4.menu.debug.on=On
+duinopeak_pygamer_advance_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak MONSTER M4SK Express (SAMD51)
+# ------------------------------
+duinopeak_monster_m4sk.name=Duinopeak MONSTER M4SK (SAMD51)
+duinopeak_monster_m4sk.vid.0=0x239A
+duinopeak_monster_m4sk.pid.0=0x8047
+duinopeak_monster_m4sk.vid.1=0x239A
+duinopeak_monster_m4sk.pid.1=0x0047
+duinopeak_monster_m4sk.vid.1=0x239A
+duinopeak_monster_m4sk.pid.1=0x8048
+duinopeak_monster_m4sk.upload.tool=bossac18
+duinopeak_monster_m4sk.upload.protocol=sam-ba
+duinopeak_monster_m4sk.upload.maximum_size=507904
+duinopeak_monster_m4sk.upload.offset=0x4000
+duinopeak_monster_m4sk.upload.use_1200bps_touch=true
+duinopeak_monster_m4sk.upload.wait_for_upload_port=true
+duinopeak_monster_m4sk.upload.native_usb=true
+duinopeak_monster_m4sk.build.mcu=cortex-m4
+#duinopeak_monster_m4sk.build.f_cpu=120000000L
+duinopeak_monster_m4sk.build.usb_product="Duinopeak MONSTER M4SK"
+duinopeak_monster_m4sk.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_monster_m4sk.build.board=MONSTER_M4SK
+duinopeak_monster_m4sk.build.core=arduino
+duinopeak_monster_m4sk.build.extra_flags=-D__SAMD51G19A__ -DDUINOPEAK_MONSTER_M4SK_EXPRESS -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_monster_m4sk.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_monster_m4sk.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_monster_m4sk.build.variant=monster_m4sk
+duinopeak_monster_m4sk.build.variant_system_lib=
+duinopeak_monster_m4sk.build.vid=0x239A
+duinopeak_monster_m4sk.build.pid=0x8047
+duinopeak_monster_m4sk.bootloader.tool=openocd
+duinopeak_monster_m4sk.bootloader.file=boneduinoM4/bootloader-boneduino_m4-v2.0.0-duinopeak.5.bin
+duinopeak_monster_m4sk.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_monster_m4sk.menu.cache.on=Enabled
+duinopeak_monster_m4sk.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_monster_m4sk.menu.cache.off=Disabled
+duinopeak_monster_m4sk.menu.cache.off.build.cache_flags=
+duinopeak_monster_m4sk.menu.speed.120=120 MHz (standard)
+duinopeak_monster_m4sk.menu.speed.120.build.f_cpu=120000000L
+duinopeak_monster_m4sk.menu.speed.150=150 MHz (overclock)
+duinopeak_monster_m4sk.menu.speed.150.build.f_cpu=150000000L
+duinopeak_monster_m4sk.menu.speed.180=180 MHz (overclock)
+duinopeak_monster_m4sk.menu.speed.180.build.f_cpu=180000000L
+duinopeak_monster_m4sk.menu.speed.200=200 MHz (overclock)
+duinopeak_monster_m4sk.menu.speed.200.build.f_cpu=200000000L
+duinopeak_monster_m4sk.menu.opt.small=Small (-Os) (standard)
+duinopeak_monster_m4sk.menu.opt.small.build.flags.optimize=-Os
+duinopeak_monster_m4sk.menu.opt.fast=Fast (-O2)
+duinopeak_monster_m4sk.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_monster_m4sk.menu.opt.faster=Faster (-O3)
+duinopeak_monster_m4sk.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_monster_m4sk.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_monster_m4sk.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_monster_m4sk.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_monster_m4sk.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_monster_m4sk.menu.maxqspi.50=50 MHz (standard)
+duinopeak_monster_m4sk.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_monster_m4sk.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_monster_m4sk.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_monster_m4sk.menu.usbstack.arduino=Arduino
+duinopeak_monster_m4sk.menu.usbstack.tinyusb=TinyUSB
+duinopeak_monster_m4sk.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_monster_m4sk.menu.debug.off=Off
+duinopeak_monster_m4sk.menu.debug.on=On
+duinopeak_monster_m4sk.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak Hallowing M4 Express (SAMD51)
+# ------------------------------
+duinopeak_hallowing_m4.name=Duinopeak Hallowing M4 (SAMD51)
+duinopeak_hallowing_m4.vid.0=0x239A
+duinopeak_hallowing_m4.pid.0=0x8049
+duinopeak_hallowing_m4.vid.1=0x239A
+duinopeak_hallowing_m4.pid.1=0x0049
+duinopeak_hallowing_m4.vid.1=0x239A
+duinopeak_hallowing_m4.pid.1=0x804A
+duinopeak_hallowing_m4.upload.tool=bossac18
+duinopeak_hallowing_m4.upload.protocol=sam-ba
+duinopeak_hallowing_m4.upload.maximum_size=507904
+duinopeak_hallowing_m4.upload.offset=0x4000
+duinopeak_hallowing_m4.upload.use_1200bps_touch=true
+duinopeak_hallowing_m4.upload.wait_for_upload_port=true
+duinopeak_hallowing_m4.upload.native_usb=true
+duinopeak_hallowing_m4.build.mcu=cortex-m4
+#duinopeak_hallowing_m4.build.f_cpu=120000000L
+duinopeak_hallowing_m4.build.usb_product="Duinopeak Hallowing M4"
+duinopeak_hallowing_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_hallowing_m4.build.board=HALLOWING_M4
+duinopeak_hallowing_m4.build.core=arduino
+duinopeak_hallowing_m4.build.extra_flags=-D__SAMD51J19A__ -DDUINOPEAK_HALLOWING_M4_EXPRESS -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_hallowing_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_hallowing_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_hallowing_m4.build.variant=hallowing_m4
+duinopeak_hallowing_m4.build.variant_system_lib=
+duinopeak_hallowing_m4.build.vid=0x239A
+duinopeak_hallowing_m4.build.pid=0x8049
+duinopeak_hallowing_m4.bootloader.tool=openocd
+duinopeak_hallowing_m4.bootloader.file=boneduino_m4_express/bootloader-boneduino_m4-v2.0.0-duinopeak.5.bin
+duinopeak_hallowing_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_hallowing_m4.menu.cache.on=Enabled
+duinopeak_hallowing_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_hallowing_m4.menu.cache.off=Disabled
+duinopeak_hallowing_m4.menu.cache.off.build.cache_flags=
+duinopeak_hallowing_m4.menu.speed.120=120 MHz (standard)
+duinopeak_hallowing_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_hallowing_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_hallowing_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_hallowing_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_hallowing_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_hallowing_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_hallowing_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_hallowing_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_hallowing_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_hallowing_m4.menu.opt.fast=Fast (-O2)
+duinopeak_hallowing_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_hallowing_m4.menu.opt.faster=Faster (-O3)
+duinopeak_hallowing_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_hallowing_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_hallowing_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_hallowing_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_hallowing_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_hallowing_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_hallowing_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_hallowing_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_hallowing_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_hallowing_m4.menu.usbstack.arduino=Arduino
+duinopeak_hallowing_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_hallowing_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_hallowing_m4.menu.debug.off=Off
+duinopeak_hallowing_m4.menu.debug.on=On
+duinopeak_hallowing_m4.menu.debug.on.build.flags.debug=-g
+
+# Duinopeak Matrix Portal M4 (SAMD51)
+# ------------------------------
+duinopeak_matrixportal_m4.name=Duinopeak Matrix Portal M4 (SAMD51)
+duinopeak_matrixportal_m4.vid.0=0x239A
+duinopeak_matrixportal_m4.pid.0=0x80C9
+duinopeak_matrixportal_m4.vid.1=0x239A
+duinopeak_matrixportal_m4.pid.1=0x00C9
+duinopeak_matrixportal_m4.vid.1=0x239A
+duinopeak_matrixportal_m4.pid.1=0x80CA
+duinopeak_matrixportal_m4.upload.tool=bossac18
+duinopeak_matrixportal_m4.upload.protocol=sam-ba
+duinopeak_matrixportal_m4.upload.maximum_size=507904
+duinopeak_matrixportal_m4.upload.offset=0x4000
+duinopeak_matrixportal_m4.upload.use_1200bps_touch=true
+duinopeak_matrixportal_m4.upload.wait_for_upload_port=true
+duinopeak_matrixportal_m4.upload.native_usb=true
+duinopeak_matrixportal_m4.build.mcu=cortex-m4
+#duinopeak_matrixportal_m4.build.f_cpu=120000000L
+duinopeak_matrixportal_m4.build.usb_product="Duinopeak Matrix Portal M4"
+duinopeak_matrixportal_m4.build.usb_manufacturer="Duinopeak LLC"
+duinopeak_matrixportal_m4.build.board=MATRIXPORTAL_M4
+duinopeak_matrixportal_m4.build.core=arduino
+duinopeak_matrixportal_m4.build.extra_flags=-D__SAMD51J19A__ -DDUINOPEAK_MATRIXPORTAL_M4_EXPRESS -DCRYSTALLESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_matrixportal_m4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+duinopeak_matrixportal_m4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+duinopeak_matrixportal_m4.build.variant=matrixportal_m4
+duinopeak_matrixportal_m4.build.variant_system_lib=
+duinopeak_matrixportal_m4.build.vid=0x239A
+duinopeak_matrixportal_m4.build.pid=0x80C9
+duinopeak_matrixportal_m4.bootloader.tool=openocd
+duinopeak_matrixportal_m4.bootloader.file=matrixportalM4/bootloader-matrixportal_m4.bin
+duinopeak_matrixportal_m4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+duinopeak_matrixportal_m4.menu.cache.on=Enabled
+duinopeak_matrixportal_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+duinopeak_matrixportal_m4.menu.cache.off=Disabled
+duinopeak_matrixportal_m4.menu.cache.off.build.cache_flags=
+duinopeak_matrixportal_m4.menu.speed.120=120 MHz (standard)
+duinopeak_matrixportal_m4.menu.speed.120.build.f_cpu=120000000L
+duinopeak_matrixportal_m4.menu.speed.150=150 MHz (overclock)
+duinopeak_matrixportal_m4.menu.speed.150.build.f_cpu=150000000L
+duinopeak_matrixportal_m4.menu.speed.180=180 MHz (overclock)
+duinopeak_matrixportal_m4.menu.speed.180.build.f_cpu=180000000L
+duinopeak_matrixportal_m4.menu.speed.200=200 MHz (overclock)
+duinopeak_matrixportal_m4.menu.speed.200.build.f_cpu=200000000L
+duinopeak_matrixportal_m4.menu.opt.small=Small (-Os) (standard)
+duinopeak_matrixportal_m4.menu.opt.small.build.flags.optimize=-Os
+duinopeak_matrixportal_m4.menu.opt.fast=Fast (-O2)
+duinopeak_matrixportal_m4.menu.opt.fast.build.flags.optimize=-O2
+duinopeak_matrixportal_m4.menu.opt.faster=Faster (-O3)
+duinopeak_matrixportal_m4.menu.opt.faster.build.flags.optimize=-O3
+duinopeak_matrixportal_m4.menu.opt.fastest=Fastest (-Ofast)
+duinopeak_matrixportal_m4.menu.opt.fastest.build.flags.optimize=-Ofast
+duinopeak_matrixportal_m4.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+duinopeak_matrixportal_m4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+duinopeak_matrixportal_m4.menu.maxqspi.50=50 MHz (standard)
+duinopeak_matrixportal_m4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+duinopeak_matrixportal_m4.menu.maxqspi.fcpu=CPU Speed / 2
+duinopeak_matrixportal_m4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+duinopeak_matrixportal_m4.menu.usbstack.arduino=Arduino
+duinopeak_matrixportal_m4.menu.usbstack.tinyusb=TinyUSB
+duinopeak_matrixportal_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+duinopeak_matrixportal_m4.menu.debug.off=Off
+duinopeak_matrixportal_m4.menu.debug.on=On
+duinopeak_matrixportal_m4.menu.debug.on.build.flags.debug=-g
